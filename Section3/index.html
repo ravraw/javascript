@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+    body,html{
+        width:100vh;
+        height: 100vh;
+    }
+    .container{
+        margin:100px auto;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div class = "container">
+        <input id = "arrayInput" type = "text" placeholder = "Enter to add to array">
+        <button id = "addButton">Add</button>
+
+    </div>
+
+
+    <script>
+
+        const myArray = [];
+        const userInput = document.querySelector("#arrayInput");
+        document.querySelector("#addButton").addEventListener('click',()=>{
+            myArray.push(userInput.value);
+            userInput.value = "";
+            console.log(myArray);
+        })
+
+
+    </script>
+</body>
+
+</html>
