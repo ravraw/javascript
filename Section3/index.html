@@ -19,6 +19,8 @@
     <div class = "container">
         <input id = "arrayInput" type = "text" placeholder = "Enter to add to array">
         <button id = "addButton">Add</button>
+         <button id = "deleteButton">Delete</button>
+
 
     </div>
 
@@ -28,8 +30,15 @@
         const myArray = [];
         const userInput = document.querySelector("#arrayInput");
         document.querySelector("#addButton").addEventListener('click',()=>{
-            myArray.push(userInput.value);
-            userInput.value = "";
+            if(userInput.value){
+                myArray.push(userInput.value);
+                userInput.value = "" ;
+            }
+            console.log(myArray);
+        })
+
+        document.querySelector("#deleteButton").addEventListener('click',()=>{
+            myArray.pop();
             console.log(myArray);
         })
 
